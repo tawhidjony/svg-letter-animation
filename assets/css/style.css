@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+   font-family: 'Raleway', sans-serif;
+}
+
+
+
+/*================================================================================================*/
+/*======================================= REUSEABLE ==============================================*/
+/*================================================================================================*/
+
+/*
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+*/
+
+.slider-area{
+    position: relative;
+    overflow: hidden;
+}
+.slider-area img{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    animation: zoomin 5s forwards;
+  
+}
+.svg-mask-latter {
+       width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 456px;
+    left: 1220px;
+    transform: translate(-50%, -50%);
+    
+}
+
+.letter-e,
+.letter-g
+{
+    fill: #ffffff;
+}
+.svg-mask-latter svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+                                      
+.svg-mask-latter svg image{
+    overflow: hidden;
+}
+
+.overally-coler-e{
+    background-color:rgba(106, 177, 224, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: fadein 2s;
+
+}
+
+
+@keyframes fadein {
+    from { opacity: .1; }
+    to   { opacity: 1; }
+}
+@keyframes zoomin {
+    0% {
+        transform: scale(1,1);
+    }
+    100% {
+        transform: scale(1.2,1.2);
+    }
+}
