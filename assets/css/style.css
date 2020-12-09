@@ -18,64 +18,94 @@ body{
 /*======================================= REUSEABLE ==============================================*/
 /*================================================================================================*/
 
-/*
-.row {
-    max-width: 1140px;
-    margin: 0 auto;
-}
-*/
-
-.slider-area{
+.svg-main-area {
     position: relative;
-    overflow: hidden;
-}
-.slider-area img{
     width: 100%;
+    max-width: 100%;
     height: 100vh;
-    position: relative;
-    animation: zoomin 5s forwards;
-  
-}
-.svg-mask-latter {
-       width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 456px;
-    left: 1220px;
-    transform: translate(-50%, -50%);
+    overflow: hidden;
     
 }
-
-.letter-e,
-.letter-g
-{
-    fill: #ffffff;
+.svg-inner-area{
+    height: 100%;
 }
-.svg-mask-latter svg {
+
+.svg-area-visual {
+    position: relative;
+    height: 100%;
+}
+.svg-area-visua-typo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    z-index: 3;
+    height: auto;
+  
+}
+
+/*svg area css*/
+.svg-letter-group{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    vertical-align: middle;
 }
-                                      
-.svg-mask-latter svg image{
+.svg-path-letter-color{
+    fill:#ffffff;
+}
+
+
+/*slider bg img*/
+.slider-bg {
+    position: relative;
+    height: 100%;
     overflow: hidden;
+}
+.slider-bg img{
+    width: 100%;
+    height: auto;
+    animation: zoomin 5s forwards;
+}
+@media (min-width: 768px){
+    .svg-main-area {
+       background-color: #000000;
+
+    }
+    .svg-area-visua-typo {
+        width: 100%;
+        padding-top: 43%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width:767px){
+    .svg-area-visua-typo {
+        width: 100%;
+        padding-top: 64%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width:1024px){
+    .slider-bg img{
+        width: auto;
+        height: 100%;
+        animation: zoomin 5s forwards;
+    }
 }
 
 .overally-coler-e{
-    background-color:rgba(106, 177, 224, 0.6);
+    background-color:#00d9ffbe;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
     animation: fadein 2s;
 
 }
-
-
 @keyframes fadein {
     from { opacity: .1; }
     to   { opacity: 1; }
